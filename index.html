@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "styles.css">
+<meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<body style="background-color:#C05c9F;">
+<div class="header">
+<h2 style = "color: white">LOST IN CORNELIA STREET</h2>
+</div>
+
+<div class="topnav">
+<a href="https://www.facebook.com/katrinajohannah.taneo?mibextid=ZbWKwL">Facebook</a>
+<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Ftrinajoyy%3Figshid%3DZDdkNTZiNTM%253D%26fbclid%3DIwAR1_RqygeWzrdTXjq5XJOBJcQIcwgTcVkr5wtK93Ohi7p4FtLDP8-UYi1-U&h=AT3snfH1AP9McM6xWhjHmBLLBnn1yp2V-Q4-jsQt7OP-q6OHlQNuBvYUh-gKsWESDC0PYwGoY2_0vqXDPRDsEJhgRIXT5pq5tBmnbyLTIXb0shuDrDBn0q-vzpOPiOCswB8UWw">Instagram</a>
+<a href="https://youtube.com/@ENHYPENOFFICIAL">Youtube</a>
+<a href="https://r.search.yahoo.com/_ylt=AwrOtOVEfx5kCD8YbzZXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1679749061/RO=10/RU=https%3a%2f%2fwww.ust.edu.ph%2f/RK=2/RS=u0oc9Vg_lH7XFoBUH9863X1DdlY-">Education</a>
+</div>
+
+<div class="row">
+<div class="leftcolumn">
+<div class="card">
+<h2>KATRINA JOY T.</h2>
+<h5>July 00, 1989 &nbsp - &nbsp London, England</h5>
+<div class="meimg" style="height:350px;"></div>
+<p>Me!</p>
+<p>Many of us struggle with loving ourselves with the growing self hate/dislike in the world, it becomes hard to be happy sometimes. No one can truly make you love yourself, other than YOU. Oftentimes, a compliment will make you happy, but eventually you will be pulled back to look at your imperfections. Some may have had a past that has brought down self esteem, others may find themselves comparing themselves to the outside world constantly.</p>
+</div>
+
+<div class="card">
+<h2>Daylight is ME</h2>
+<!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="jay4.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="jay1.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="jay3.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="jay6.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="jay5.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="jay7.jpg" style="width:100%">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="jay4.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nostalgia">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="jay1.jpg" style="width:100%" onclick="currentSlide(2)" alt="She">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="jay3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Blondie, my beloved">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="jay6.jpg" style="width:100%" onclick="currentSlide(4)" alt="At School">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="jay5.png" style="width:100%" onclick="currentSlide(5)" alt="My safe skies">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="jay7.jpg" style="width:100%" onclick="currentSlide(6)" alt="reward for me">
+      </div>
+    </div>
+  </div>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+<p>Katrina and her thoughts.</p>
+<p>Imperfections don't make anyone perfect, but make you the person you are. Some imperfections are harmful, and DO need to be changed, but that is up to your personal judgement and decision. It is in human nature to search for the things one does not have, in the end, one fails to realize what they had from the beginning. Self love begins when you begin to see the small things you have never appreciated in yourself. It begins when you see the things you have accomplished, no matter how large or small they may be. The next time you feel terrible about yourself, remember that the one thing you're focusing on, does not define who you are. Self love won't take a few hours or days, this can take years, but you can do this and you are never alone. There will be others to pick you up and be right beside you when you fall, but at the end of the day, it's up to you to choose how you see yourself. At the end of the day, whether or not you realize it; nothing in the world ever was and never will be equal to the worth of your life and the wonderful things you do for the world.</i></i>
+<br> 
+<h5><i>I just wanted you to know</i>
+<br><i>That this is me trying</i>
+<br><i>At least I'm trying</i> 
+<br><br> This is me trying - T. Swift</h5></p>
+</div>
+<div class="card">
+<img src="coms.jpg" style = "width:1010px">
+</div>
+</div>
+
+<div class="rightcolumn"> 
+<div class="card">
+<h5>0001-1000</h5>
+<img src="cat.jpg" style = "width:220px">
+<h2>She, in other POV</h2>
+<p>•She preferred most of all to live with flowers and music and to have a book, in quite solitude <br>
+<h2>Education</h2>
+• During my elementary and high school days, I was a consistent honor student. Im currently taking BSN at De La Salle University Manila. <br>
+<h2>Employment</h2>
+• Currently teaching ballroom at Tania Dance Studio.
+<h2>Other Information</h2>
+•Im doing runway modelling and you can ask other informations at my socials. 
+ </p>
+</div>
+
+<div class="card">
+<h2>RECENT POST</h2>
+<img src="en3.jpg" style = "width:220px">
+<img src="hf4.jpg" style = "width:220px">
+<img src="ty.jpg" style = "width:220px">
+<img src="nj.jpg" style = "width:220px">
+<img src="yoyoky.jpg" style = "width:220px">
+<img src="lese.jpg" style = "width:220px">
+<img src="her.jpg" style = "width:220px">
+<img src="dance.jpg" style = "width:220px">
+<img src="cry.jpg" style = "width:220px">
+
+</div>
+</div>
+</div>
+
+<div class="footer">
+<h6>You're on your own kid, you always have been.</h6>
+</div>
+
+</body>
+</html>
